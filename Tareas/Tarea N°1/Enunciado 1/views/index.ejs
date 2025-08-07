@@ -1,0 +1,29 @@
+<% include('layout', { body: null }) %>
+<h2>Lista de Contactos</h2>
+<table>
+    <tr>
+        <th>Nombres</th>
+        <th>Apellidos</th>
+        <th>Fecha de Nacimiento</th>
+        <th>Dirección</th>
+        <th>Celular</th>
+        <th>Correo</th>
+        <th>Acciones</th>
+    </tr>
+  <% datos.forEach(datos => { %>
+    <tr>
+      <td><%= datos.nombres %></td>
+      <td><%= datos.apellidos %></td>
+      <td><%= datos.fecha_nacimiento %></td>
+      <td><%= datos.direccion %></td>
+      <td><%= datos.celular %></td>
+      <td><%= datos.correo %></td>
+      <td>
+        <a href="/edit/<%= datos.id %>">Editar</a> |
+        <a href="/delete/<%= datos.id %>">Eliminar</a>
+        <a href="/add/">Agregar</a>
+      </td>
+    </tr>
+  <% }); %>
+</table>
+

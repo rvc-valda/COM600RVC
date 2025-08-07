@@ -1,0 +1,11 @@
+<% include('layout', { body: null }) %>
+<h2>Agregar Contacto</h2>
+<form action="/add" method="POST">
+    <label>Nombres: <input name="nombres" required></label><br>
+    <label>Apellidos: <input name="apellidos" required></label><br>
+    <label>Fecha de Nacimiento: <input name="fecha_nacimiento" required></label><br>
+    <label>Direccion: <input name="direccion" required></label><br>
+    <label>Celular: <input name="celular" required></label><br>
+    <label>Correo: <input type="email" name="correo" required></label><br>
+    <button type="submit">Guardar</button>
+</form>
