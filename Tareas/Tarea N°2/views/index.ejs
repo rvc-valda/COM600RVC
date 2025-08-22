@@ -1,0 +1,28 @@
+<% include('layout', { body: null }) %>
+<h2>Lista de Contactos</h2>
+<table>
+    <tr>
+        <th>Nombres</th>
+        <th>Apellidos</th>
+        <th>Fecha de Nacimiento</th>
+        <th>Dirección</th>
+        <th>Celular</th>
+        <th>Correo</th>
+        <th>Acciones</th>
+    </tr>
+  <% datos.forEach(dato => { %>
+    <tr>
+      <td><%= dato.nombres %></td>
+      <td><%= dato.apellidos %></td>
+      <td><%= dato.fecha_nacimiento ? dato.fecha_nacimiento.toISOString().split('T')[0] : '' %></td>
+      <td><%= dato.direccion %></td>
+      <td><%= dato.celular %></td>
+      <td><%= dato.correo %></td>
+      <td>
+        <a href="/add/">Añadir</a>
+        <a href="/edit/<%= dato._id %>">Editar</a> |
+        <a href="/delete/<%= dato._id %>">Eliminar</a>
+      </td>
+    </tr>
+  <% }); %>
+</table>
