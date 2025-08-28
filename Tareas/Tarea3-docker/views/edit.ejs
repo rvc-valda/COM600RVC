@@ -1,0 +1,13 @@
+<% include('layout', { body: null }) %>
+<h2>Editar Contacto</h2>
+<form action="/edit/<%= datos._id %>" method="POST">
+  <label>Nombres: <input name="nombres" value="<%= datos.nombres %>" required></label><br>
+  <label>Apellidos: <input name="apellidos" value="<%= datos.apellidos %>" required></label><br>
+  <label>Fecha de Nacimiento: 
+    <input type="date" name="fecha_nacimiento" value="<%= datos.fecha_nacimiento ? datos.fecha_nacimiento.toISOString().split('T')[0] : '' %>" required>
+  </label><br>
+  <label>Direccion: <input name="direccion" value="<%= datos.direccion %>" required></label><br>
+  <label>Celular: <input name="celular" value="<%= datos.celular %>" required></label><br>
+  <label>Correo: <input type="email" name="correo" value="<%= datos.correo %>" required></label><br>
+  <button type="submit">Actualizar</button>
+</form>
