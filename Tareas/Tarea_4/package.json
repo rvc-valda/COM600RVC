@@ -6,7 +6,7 @@
     "dev": "nodemon src/app.js",
     "start": "node src/app.js"
   },
-  "author": "Luis Fernando Villca",
+  "author": "Rodrigo Valda Corchado",
   "license": "MIT",
   "devDependencies": {
     "nodemon": "^3.1.10"
@@ -20,3 +20,4 @@
     "typeorm": "^0.3.26"
   }
 }
+
