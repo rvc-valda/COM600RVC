@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package vehiculos;
+
+service VehiculoService {
+  rpc VerificarDisponibilidad (VerificarRequest) returns (VerificarResponse);
+}
+
+message VerificarRequest {
+  string id = 1;
+}
+
+message VerificarResponse {
+  bool disponible = 1;
+  string tipo = 2;
+  int32 capacidad = 3;
+  string estado = 4;
+}
